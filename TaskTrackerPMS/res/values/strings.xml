@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">施工问题跟踪</string>
+    <string name="tab_menu_text0">首页</string>
+    <string name="tab_menu_text1">计划分配</string>
+    <string name="tab_menu_text2">施工确认</string>
+    <string name="tab_menu_text3">我的</string>
+    <string name="confirm_password">确认密码:</string>
+    <string name="no_value">没有数据</string>
+     <string name="no_more">没有更多</string>
+    <string name="image_scan">图片预览</string>
+    <string name="choose_file_title">选择内容</string>
+    
+    <string name="password_hint">请输入密码</string>
+    <string name="input_password_again">请输入密码</string>
+    <string name="confirm_password_hint">请再次确认密码</string>
+    <string name="register_commit">提交注册</string>
+    <string name="private_law">隐私服务条款</string>
+    
+    
+    
+    <string name="register_phone">请输入手机号</string>
+    <string name="input_account">请输入账号</string>
+    <string name="input_password">请输入密码</string>
+    <string name="account_too_long">手机号太长！</string>
+    <string name="account_too_short">手机号太短！</string>
+    <string name="name_too_long">姓名太长！</string>
+    <string name="name_is_null">请输入姓名！</string>
+    <string name="password_too_long">密码太长！</string>
+    <string name="password_too_short">密码太短！</string>
+   
+
+</resources>

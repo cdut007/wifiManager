@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/container_bg_color"
+    android:minHeight="50dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/issue_index_item"
+            style="@style/common_text_title_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="施工班组" />
+
+        <TextView
+            android:id="@+id/issue_topic"
+            style="@style/common_text_title_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            
+            android:singleLine="true"
+            android:text="分配总量" />
+
+        <TextView
+            android:id="@+id/issue_status"
+            style="@style/common_text_title_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:paddingLeft="6dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="完成量" />
+
+        <TextView
+            android:id="@+id/issue_delivery"
+            style="@style/common_text_title_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="当前施工量" />
+
+    </LinearLayout>
+
+</LinearLayout>
