@@ -292,6 +292,11 @@ static Handler handler = new Handler();
 	}
 
 	String login = "";
+	public static void simultor(String url, String jsonParamString,
+			AsyncHttpResponseHandler responseHandler, int type) {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 

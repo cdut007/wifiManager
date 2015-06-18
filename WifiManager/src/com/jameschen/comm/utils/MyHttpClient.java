@@ -1,10 +1,15 @@
 package com.jameschen.comm.utils;
 
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.entity.StringEntity;
+import org.json.JSONObject;
+
+import android.content.Context;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -32,6 +37,28 @@ public class MyHttpClient  {
 	      client.get(getAbsoluteUrl(url), params, responseHandler);
 	  }
 
+	  
+	  public static void postJson(Context context,String url, JSONObject jsonParams, AsyncHttpResponseHandler responseHandler) {
+		 String jsonParamString = jsonParams.toString();
+		  Log.i("reqUrl", "url="+url+"; jsonParams="+jsonParamString);
+		  StringEntity entity=null;
+		try {
+			entity = new StringEntity(jsonParamString);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			  Log.i("reqUrl", "url="+url+"; error="+e.getLocalizedMessage());
+			  responseHandler.onFinish();
+			  return;
+		}
+
+		  if (TestReq.debug) {
+			  TestReq.simultor(url,jsonParamString,responseHandler,1);
+			return;
+		  }
+	      client.post(context,getAbsoluteUrl(url), entity,"application/json", responseHandler);
+	  }
+	  
 	  public static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
 		  printReqUrl(url, params);
 		  if (TestReq.debug) {
