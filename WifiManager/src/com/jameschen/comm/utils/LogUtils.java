@@ -9,7 +9,7 @@ import java.util.Set;
 
 import com.thirdpart.model.LogInController;
 import com.thirdpart.model.entity.UserInfo;
-import com.thirdpart.tasktrackerpms.ui.MyApplication;
+import com.thirdpart.wifimanager.ui.MyApplication;
 
 import android.app.Activity;
 import android.content.ComponentName;

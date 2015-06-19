@@ -19,8 +19,6 @@ import com.jameschen.comm.utils.StringUtil;
 import com.jameschen.framework.base.UINetworkHandler;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.thirdpart.model.entity.RollingPlan;
-import com.thirdpart.model.entity.RollingPlanList;
 
 public class TestReq {
 

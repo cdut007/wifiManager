@@ -17,11 +17,10 @@ import com.thirdpart.model.LogInController;
 import com.thirdpart.model.PushModel;
 import com.thirdpart.model.ConstValues.Item;
 import com.thirdpart.model.ConstValues.CategoryInfo.User;
-import com.thirdpart.model.entity.IssueMenu;
-import com.thirdpart.tasktrackerpms.R;
-import com.thirdpart.tasktrackerpms.ui.IssueActivity;
-import com.thirdpart.tasktrackerpms.ui.MainActivity;
-import com.thirdpart.tasktrackerpms.ui.MineActivity;
+import com.thirdpart.wifimanager.R;
+import com.thirdpart.wifimanager.ui.IssueActivity;
+import com.thirdpart.wifimanager.ui.MainActivity;
+import com.thirdpart.wifimanager.ui.MineActivity;
 
 import android.R.integer;
 import android.app.Fragment.SavedState;
@@ -179,7 +178,7 @@ public class JpushReceiver extends BroadcastReceiver {
 		
 		if (pushModel != null && 
 				LogInController.getInstance(context).IsLogOn()) {
-			if (!LogInController.getInstance(context).getInfo().getId().equals(pushModel.userId)) {
+			if (!LogInController.getInstance(context).getInfo().getPhone().equals(pushModel.userId)) {
 				Log.i(TAG, "push id is="+pushModel.userId);
 				return;
 			}
@@ -227,19 +226,13 @@ public class JpushReceiver extends BroadcastReceiver {
 			 //resultIntent = new Intent(context, MineActivity.class);
 			  	Log.i(TAG, "distrubite new plan to me～～");
 			  
-				IssueMenu p = IssueMenu.getPlan();
-				resultIntent.putExtra(Item.MINE, p);
 				
 		}else if (flag == 2) {
 			//resultIntent = new Intent(context, MineActivity.class);
 		  	Log.i(TAG, "distrubite new plan to me～～");
 		  
-			IssueMenu p = IssueMenu.getPlan();
-			resultIntent.putExtra(Item.MINE, p);
 		}else if (flag==3) {//我创建的活动
-			IssueMenu issueMenu =IssueMenu.getIssue(pushModel.category);
 			 resultIntent = new Intent(context, IssueActivity.class);
-			 resultIntent.putExtra(Item.ISSUE, issueMenu);
 			
 			
 		}

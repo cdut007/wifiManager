@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.thirdpart.tasktrackerpms"
+    package="com.thirdpart.wifimanager"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,10 +9,10 @@
         android:targetSdkVersion="19" />
     <!-- Required 自定义用来收发消息的相关权限 -->
     <permission
-        android:name="com.thirdpart.tasktrackerpms.permission.JPUSH_MESSAGE"
+        android:name="com.thirdpart.wifimanager.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.thirdpart.tasktrackerpms.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.thirdpart.wifimanager.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -36,7 +36,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name="com.thirdpart.tasktrackerpms.ui.MyApplication"
+        android:name="com.thirdpart.wifimanager.ui.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -69,83 +69,12 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name=".ui.WorkStepListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
+        
          <activity
-            android:name=".ui.PlanWorkStepListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity> 
-        <activity
-            android:name=".ui.WitnessChooseActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-         <activity
-            android:name=".ui.PlanDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>  
-        <activity
-            android:name=".ui.IssueActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>   
-        <activity
-            android:name=".ui.IssueConfirmActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>  
-        <activity
-            android:name=".ui.IssueDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".ui.IssueFeedbackActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-         <activity
-            android:name=".ui.TaskDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity> 
-         <activity
-            android:name=".ui.DeliveryPlanListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity> 
-         
-        <activity
-            android:name=".ui.WorkStepDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-          <activity
-            android:name=".ui.WitnessActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>  
-           <activity
             android:name=".ui.SettingActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>  
-         <activity
-            android:name=".ui.WitnessUpdateActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity> 
-        <activity
-            android:name=".ui.IssueSolveActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-        
         <activity
             android:name=".ui.ImageDetailActivity"
             android:label="@string/app_name"
@@ -169,7 +98,7 @@
             <intent-filter>
                 <action android:name="cn.jpush.android.ui.PushActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.thirdpart.tasktrackerpms" />
+                <category android:name="com.thirdpart.wifimanager" />
             </intent-filter>
         </activity>
         <!-- Required  SDK核心功能-->
@@ -200,7 +129,7 @@
             android:enabled="true" >
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
-                <category android:name="com.thirdpart.tasktrackerpms" />
+                <category android:name="com.thirdpart.wifimanager" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -229,7 +158,7 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
                 <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="com.thirdpart.tasktrackerpms" />
+                <category android:name="com.thirdpart.wifimanager" />
             </intent-filter>
         </receiver>
  

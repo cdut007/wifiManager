@@ -21,7 +21,7 @@ import android.widget.TextView;
 import com.jameschen.comm.utils.StringUtil;
 import com.jameschen.comm.utils.UtilsUI;
 import com.thirdpart.model.WidgetItemInfo;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class TabItemView extends FrameLayout {
 	public TabItemView(Context context){

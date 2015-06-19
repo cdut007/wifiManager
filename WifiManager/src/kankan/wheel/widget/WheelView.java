@@ -36,7 +36,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 /**
  * Numeric wheel view.

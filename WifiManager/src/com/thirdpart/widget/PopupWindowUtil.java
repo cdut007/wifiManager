@@ -16,7 +16,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.thirdpart.model.WidgetItemInfo;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class PopupWindowUtil implements OnClickListener {
 	PopupWindow popupWindow;

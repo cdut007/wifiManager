@@ -18,11 +18,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jameschen.comm.utils.CrypToCfg;
 import com.jameschen.comm.utils.Log;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.thirdpart.model.ConstValues.CategoryInfo.User;
-import com.thirdpart.model.entity.Privilege;
 import com.thirdpart.model.entity.Role;
 import com.thirdpart.model.entity.UserInfo;
-import com.thirdpart.tasktrackerpms.ui.LoginActivity;
+import com.thirdpart.wifimanager.ui.LoginActivity;
 
 public class LogInController {
 
@@ -54,57 +54,30 @@ public class LogInController {
 	}
 	
 	
-
-	public boolean matchUrls(String url){
-		 List<Privilege> priviles = getInfo().getPrivileges();
-		if (priviles==null) {
-			return false;
-		}
-		 for (Privilege role : priviles) {
-			if (url.equals(role.getUri())) {
-				Log.i("role", "find url ok");
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean matchPlanUrls(){
-		 List<Privilege> priviles = getInfo().getPrivileges();
-		if (priviles==null) {
-			return false;
-		}
-		 for (Privilege role : priviles) {
-			if ("/construction/mytask".equals(role.getUri())) {
-				Log.i("role", "find url ok");
-				return true;
-			}
-		}
-		return false;
-	}
 	
 	
-	public boolean matchRoles(String seaerchRole){
-		List<Role> roles = getInfo().getRoles();
-		for (Role role : roles) {
-			if (seaerchRole.equals(role.name)) {
-				Log.i("role", "find role:"+seaerchRole);
-				return true;
-			}
-		}
-		return false;
-	}
 	
-	
-	public void quit(Context context) {
+	public void quit(Context context, AsyncHttpResponseHandler responseHandler) {
 		SharedPreferences user = context.getSharedPreferences(User.SharedName,
 				0);
+		
+
+		String appSessionKey = user.getString(User.appSessionKey, null);
+		
 		user.edit().putBoolean(User.logon, false).commit();
 		user.edit().remove(User.password).commit();
 		user.edit().remove(User.userinfo).commit();
+		user.edit().remove(User.appSessionKey).commit();
+
+		
 		mController=null;
 		JPushInterface.stopPush(context);
 		JPushInterface.clearAllNotifications(context);
+		
+		if (appSessionKey!=null && responseHandler!=null) {
+			WiFiManagerAPI.getInstance(context).logout(appSessionKey, responseHandler);	
+		}
+		
 		//go to login page
 		Intent i = new Intent(context, LoginActivity.class);
 		i.setFlags(IntentCompat.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -119,7 +92,7 @@ public class LogInController {
 			readAccountDataFromPreference();
 		}
 		if (myInfo == null) {//maybe data broken ,just quit			
-		 quit(context);
+		 quit(context,null);
 		 myInfo = new UserInfo();//create an empty
 		}
 		return myInfo;
@@ -212,7 +185,7 @@ public class LogInController {
 	}
 	public void registerPush(String id) {
 		if (id == null) {
-			 id =getInfo().getId();	
+			 id =getInfo().getPhone();	
 		}
 		
 		if (id == null) {

@@ -9,8 +9,8 @@ import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 
 import com.jameschen.comm.utils.NetworkUtil;
-import com.thirdpart.tasktrackerpms.R;
-import com.thirdpart.tasktrackerpms.R.bool;
+import com.thirdpart.wifimanager.R;
+import com.thirdpart.wifimanager.R.bool;
 
 public abstract class UINetworkHandler<T> extends MyAsyncHttpResponseHandler<T> {
 

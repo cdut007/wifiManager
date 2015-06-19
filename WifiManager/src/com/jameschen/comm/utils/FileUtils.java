@@ -26,7 +26,7 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 
 import com.jameschen.comm.utils.MediaFile.MediaFileType;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class FileUtils {
 

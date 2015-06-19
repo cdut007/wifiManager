@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class EditItemView extends FrameLayout {
 	public EditItemView(Context context){

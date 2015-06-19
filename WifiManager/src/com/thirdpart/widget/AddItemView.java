@@ -25,7 +25,7 @@ import cn.jpush.android.api.m;
 import com.jameschen.comm.utils.UtilsUI;
 import com.jameschen.framework.base.BaseDetailActivity.CreateItemViewListener;
 import com.thirdpart.model.WidgetItemInfo;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class AddItemView extends FrameLayout {
 	public AddItemView(Context context){

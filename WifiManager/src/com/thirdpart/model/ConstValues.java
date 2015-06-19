@@ -93,7 +93,7 @@ public class ConstValues {
 		public static final String password = "password";
 		public static final String userinfo = "userinfo";
 		public static final String logon = "loginstate";
-		public static final String randomcode = "randomcode";
+		public static final String appSessionKey = "appSessionKey";
 		public static final String tag = "personinfo";
 	}
 

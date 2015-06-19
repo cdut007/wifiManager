@@ -31,19 +31,19 @@ import android.widget.Toast;
 
 import com.jameschen.comm.utils.Log;
 import com.thirdpart.model.LogInController;
-import com.thirdpart.model.PMSManagerAPI;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.model.WiFiManagerAPI;
+import com.thirdpart.wifimanager.R;
 
 public abstract class BaseActivity extends ActionBarActivity implements
 		OnClickListener {
 	public String TAG = "Task";
 
-	private PMSManagerAPI mPMSManagerAPI;
+	private WiFiManagerAPI mPMSManagerAPI;
 	
-	public PMSManagerAPI getPMSManager() {
+	public WiFiManagerAPI getPMSManager() {
 		// TODO Auto-generated method stub
       if (mPMSManagerAPI == null) {
-		mPMSManagerAPI = PMSManagerAPI.getInstance(this);
+		mPMSManagerAPI = WiFiManagerAPI.getInstance(this);
       }
       return mPMSManagerAPI;
 	}

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.thirdpart.model.entity.RollingPlan;
 import com.thirdpart.model.entity.base.PageList;
 
 import android.content.Context;

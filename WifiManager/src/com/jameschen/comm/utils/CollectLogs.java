@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import com.thirdpart.model.PMSManagerAPI;
+import com.thirdpart.model.WiFiManagerAPI;
 
 
 
@@ -62,7 +62,7 @@ public class CollectLogs {
 		//Clear old files
 		File file = new File(StorageUtils.getLogFile());
 		File parent = file.getParentFile();
-		String dest = parent.getAbsolutePath()+File.separator+PMSManagerAPI.getdateformat(System.currentTimeMillis())+"logs.zip";
+		String dest = parent.getAbsolutePath()+File.separator+WiFiManagerAPI.getdateformat(System.currentTimeMillis())+"logs.zip";
 		try {
 			FileUtils.zipFolder(StorageUtils.getLogFile(),dest, false);
 		} catch (Exception e) {

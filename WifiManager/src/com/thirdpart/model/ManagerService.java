@@ -12,7 +12,6 @@ import com.jameschen.framework.base.UINetworkHandler;
 
 public abstract class ManagerService {
 
-public final static String ISSUE_SERVICE = "issue_serive";
 
 
 public static interface OnUploadReqHttpCallbackListener extends OnReqHttpCallbackListener{

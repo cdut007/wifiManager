@@ -22,7 +22,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.jameschen.comm.utils.Log;
 import com.jameschen.widget.MyListView;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public abstract class BaseListFragment<T> extends BaseFragment {
 

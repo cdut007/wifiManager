@@ -18,7 +18,7 @@ import com.jameschen.framework.base.ConvertResponseResultAdapter.ReqType;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.thirdpart.model.WebResponseContent;
 import com.thirdpart.model.entity.UserInfo;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 abstract class MyAsyncHttpResponseHandler<T> extends
 		AsyncHttpResponseHandler  {
@@ -96,7 +96,7 @@ abstract class MyAsyncHttpResponseHandler<T> extends
 		try {
 			WebResponseContent mResponseContent = WebResponseContent.parseJson(response);
 
-			if ("1000".equals(mResponseContent.getCode())) {
+			if ("0".equals(mResponseContent.getStatus())) {
 			    if (type == null) {
 					type = Util.whatsMyGenericType(this);
 				}
@@ -116,7 +116,7 @@ abstract class MyAsyncHttpResponseHandler<T> extends
 
 				Log.i(TAG, "statusCode from server=" + mResponseContent.getCode() + ";Message response=" + mResponseContent.getMessage());
 				onFail(Integer.parseInt(mResponseContent.getCode()), headers,
-						"" + mResponseContent.getMessage());
+						"" + mResponseContent.getMsg());
 			}
 
 		} catch (Exception e) {

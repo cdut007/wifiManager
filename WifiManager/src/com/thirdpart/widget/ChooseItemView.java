@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.jameschen.comm.utils.UtilsUI;
 import com.thirdpart.model.WidgetItemInfo;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class ChooseItemView extends FrameLayout {
 	public ChooseItemView(Context context){

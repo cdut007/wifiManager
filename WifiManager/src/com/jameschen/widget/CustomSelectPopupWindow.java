@@ -21,7 +21,7 @@ import com.jameschen.comm.utils.Util;
 import com.jameschen.comm.utils.UtilsUI;
 import com.jameschen.framework.base.BaseActivity;
 import com.thirdpart.model.entity.Department;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class CustomSelectPopupWindow   {
 	

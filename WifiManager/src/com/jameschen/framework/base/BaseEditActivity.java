@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.http.Header;
 
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 import android.content.Context;
 import android.os.Bundle;

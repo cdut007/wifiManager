@@ -20,7 +20,7 @@ import com.jameschen.comm.utils.UtilsUI;
 import com.jameschen.framework.base.CommonCallBack.OnRetryLisnter;
 import com.thirdpart.model.WidgetItemInfo;
 import com.thirdpart.model.ManagerService.OnReqHttpCallbackListener;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 public class BaseDetailActivity extends BaseActivity implements
 OnReqHttpCallbackListener{

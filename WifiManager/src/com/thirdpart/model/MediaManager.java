@@ -32,7 +32,7 @@ import com.jameschen.comm.utils.Log;
 import com.jameschen.comm.utils.MediaFile;
 import com.jameschen.framework.base.BaseActivity;
 import com.thirdpart.model.ConstValues.CategoryInfo.Cache;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.wifimanager.R;
 
 /**
  * for choose file & upload file

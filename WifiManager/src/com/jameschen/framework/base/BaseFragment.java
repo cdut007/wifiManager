@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import com.jameschen.comm.utils.Log;
 import com.thirdpart.model.EventCallbackListener;
 import com.thirdpart.model.LogInController;
-import com.thirdpart.model.PMSManagerAPI;
-import com.thirdpart.tasktrackerpms.R;
+import com.thirdpart.model.WiFiManagerAPI;
+import com.thirdpart.wifimanager.R;
 
 /**This is the baseFragment is for root frament ,which childFragment must extends it
  * 
@@ -122,7 +122,7 @@ public abstract class BaseFragment extends Fragment{
 		return getBaseActivity().getLogInController();
 	}
 	
-	public PMSManagerAPI getPMSManager(){
+	public WiFiManagerAPI getPMSManager(){
 	
 			return (getBaseActivity()).getPMSManager();
 	}
